@@ -1,0 +1,152 @@
+# Build Settings
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "contrast"
+plugins:
+  - jekyll-include-cache
+  - jekyll-paginate
+
+# Site Settings
+locale: "en-US"
+title: Hedyosmos
+title_separator: "|"
+subtitle: odds and ends.
+permalink: /:categories/:title/
+timezone: Asia/Ho_Chi_Minh # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+name: Hedyosmos
+email: phuoctung.nguyen@outlook.com.vn
+twitter_username: Hedyosmos
+github_username:  Hedyosmos
+teaser: /assets/images/teaser.jpg
+description: >- # this means to ignore newlines
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+words_per_minute: 200
+breadcrumbs: true
+atom_feed:
+  hide: true
+search: true
+search_full_content: true
+
+# Site Author
+author:
+  name             : "Hedyosmos"
+  avatar           : "/assets/images/logo.png"
+  bio              : "Just a normie wandering around the internet... and try his best to understand."
+  location         : "Ho Chi Minh City, VN"
+  email            :
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:phuoctung.nguyen@outlook.com.vn"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://hedyosmos.github.io"
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://reddit.com/u/hedyosmos"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/hedyosmos"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hedyosmos"
+
+#Site Footer
+footer:
+  links:
+    - label: "Reddit"
+      icon: "fab fa-fw fa-reddit"
+      url: "https://reddit.com/u/hedyosmos"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/hedyosmos"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hedyosmos"
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      show_date: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Archives
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development  # disable compression in dev environment
